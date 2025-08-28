@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hadir Abdelhamid Fayad - Business Analyst</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --color-primary: #A561FF;
+            --color-secondary: #FD72AD;
+            --color-accent: #FCCE9E;
+            --color-background: #CFE3FF;
+            --color-dark: #333333;
+            --color-light: #FFFFFF;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: var(--color-background);
+            color: var(--color-dark);
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+            color: white;
+            padding: 20px 0;
+            position: relative;
+            min-height: 100px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+        
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo {
+            width: 80px;
+            height: 80px;
+            margin-right: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .logo img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+        
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .logo-name {
+            font-size: 1.8rem;
+            font-weight: bold;
+            line-height: 1.2;
+        }
+        
+        .logo-title {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 25px;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-links a:hover {
+            color: var(--color-accent);
+        }
+        
+        /* Hero Section */
+        .hero {
+            padding: 80px 0;
+            text-align: center;
+            background-color: var(--color-light);
+            border-bottom: 3px solid var(--color-primary);
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 10px;
+            color: var(--color-primary);
+        }
+        
+        .hero h2 {
+            font-size: 1.8rem;
+            color: var(--color-secondary);
+            margin-bottom: 30px;
+        }
+        
+        .hero-contact {
+            margin-top: 20px;
+            font-size: 1.1rem;
+        }
+        
+        /* About Section */
+        .about {
+            padding: 80px 0;
+            background-color: var(--color-background);
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+            color: var(--color-primary);
+            position: relative;
+        }
+        
+        .section-title::after {
+            content: "";
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background-color: var(--color-secondary);
+        }
+        
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+        
+        .about-text {
+            flex: 1;
+        }
+        
+        .about-text p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+        
+        .about-image {
+            flex: 1;
+            text-align: center;
+        }
+        
+        .profile-img {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid var(--color-primary);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Experience Section */
+        .experience {
+            padding: 80px 0;
+            background-color: var(--color-light);
+        }
+        
+        .timeline {
+            position: relative;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background-color: var(--color-primary);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+        }
+        
+        .timeline-item {
+            padding: 10px 40px;
+            position: relative;
+            width: 50%;
+            box-sizing: border-box;
+        }
+        
+        .timeline-item:nth-child(odd) {
+            left: 0;
+        }
+        
+        .timeline-item:nth-child(even) {
+            left: 50%;
+        }
+        
+        .timeline-content {
+            padding: 20px;
+            background-color: var(--color-background);
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .timeline-content h3 {
+            color: var(--color-primary);
+            margin-bottom: 10px;
+        }
+        
+        .timeline-content p {
+            color: var(--color-dark);
+            margin-bottom: 10px;
+        }
+        
+        /* Skills Section */
+        .skills {
+            padding: 80px 0;
+            background-color: var(--color-background);
+        }
+        
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .skill-category {
+            background-color: var(--color-light);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .skill-category h3 {
+            color: var(--color-primary);
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+            text-align: center;
+        }
+        
+        .skill-item {
+            margin-bottom: 15px;
+        }
+        
+        .skill-item h4 {
+            display: flex;
+            align-items: center;
+            margin-bottom: 5px;
+            color: var(--color-dark);
+        }
+        
+        .skill-item i {
+            margin-right: 10px;
+            color: var(--color-secondary);
+        }
+        
+        /* Education Section */
+        .education {
+            padding: 80px 0;
+            background-color: var(--color-light);
+        }
+        
+        .education-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .education-item {
+            background-color: var(--color-background);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .education-item h3 {
+            color: var(--color-primary);
+            margin-bottom: 15px;
+        }
+        
+        .education-item p {
+            margin-bottom: 10px;
+        }
+        
+        /* Achievements Section */
+        .achievements {
+            padding: 80px 0;
+            background-color: var(--color-background);
+        }
+        
+        .achievements-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .achievement-item {
+            background-color: var(--color-light);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            text-align: center;
+        }
+        
+        .achievement-item i {
+            font-size: 2.5rem;
+            color: var(--color-primary);
+            margin-bottom: 15px;
+        }
+        
+        .achievement-item h3 {
+            margin-bottom: 10px;
+            color: var(--color-dark);
+        }
+        
+        /* Contact Section */
+        .contact {
+            padding: 80px 0;
+            background-color: var(--color-light);
+        }
+        
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+        
+        .contact-item {
+            text-align: center;
+            padding: 30px;
+            background-color: var(--color-background);
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .contact-item i {
+            font-size: 2rem;
+            color: var(--color-primary);
+            margin-bottom: 15px;
+        }
+        
+        .contact-item h3 {
+            margin-bottom: 10px;
+            color: var(--color-dark);
+        }
+        
+        .contact-item p {
+            color: var(--color-dark);
+        }
+        
+        /* Footer */
+        footer {
+            background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+        }
+        
+        .social-links {
+            margin-bottom: 20px;
+        }
+        
+        .social-links a {
+            color: white;
+            font-size: 1.5rem;
+            margin: 0 15px;
+            transition: all 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            color: var(--color-accent);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .logo-container {
+                margin-bottom: 20px;
+                justify-content: center;
+            }
+            
+            .logo {
+                width: 70px;
+                height: 70px;
+            }
+            
+            .nav-links {
+                margin-top: 20px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            .nav-links li {
+                margin: 5px 10px;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero h2 {
+                font-size: 1.5rem;
+            }
+            
+            .about-content {
+                flex-direction: column;
+            }
+            
+            .profile-img {
+                width: 250px;
+                height: 250px;
+            }
+            
+            .timeline::after {
+                left: 31px;
+            }
+            
+            .timeline-item {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+            
+            .timeline-item:nth-child(even) {
+                left: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container header-content">
+            <div class="logo-container">
+                <div class="logo">
+                    <img src="logo.png" alt="Hadir Fayad Logo">
+                </div>
+                <div class="logo-text">
+                    <div class="logo-name">HADIR FAYAD</div>
+                    <div class="logo-title">BUSINESS ANALYST</div>
+                </div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#experience">EXPERIENCE</a></li>
+                <li><a href="#skills">SKILLS</a></li>
+                <li><a href="#education">EDUCATION</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Hadir Abdelhamid Fayad</h1>
+            <h2>Marketing Professional | Business Analyst in Progress</h2>
+            <p>Data-driven marketing professional with 5+ years of experience across diverse industries. Currently transitioning into business analysis, combining analytical tools with marketing strategy to deliver impactful insights and drive business growth.</p>
+            <div class="hero-contact">
+                <p><i class="fas fa-phone"></i> +20 15 512 060 10</p>
+                <p><i class="fas fa-link"></i> <a href="https://www.linkedin.com/in/hadir-abdelhamid-fayad-b416b61ba/" style="color: var(--color-primary);">LinkedIn Profile</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">PROFESSIONAL SUMMARY</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Data-driven marketing professional with 5+ years of experience across diverse industries. Currently transitioning into business analysis, combining analytical tools with marketing strategy to deliver impactful insights and drive business growth. Experienced in leading digital campaigns from planning to execution and aligning data insights with strategic decisions. Familiar with business analysis frameworks, stakeholder management, and reporting.</p>
+                    <p>I have managed marketing campaigns that reached over 30,000 users and developed social media strategies that boosted engagement by 40%. I'm skilled in creating data-based reports to evaluate campaign ROI and customer behavior.</p>
+                </div>
+                <div class="about-image">
+                    <img src="ChatGPT Image Aug 28, 2025, 08_58_44 PM (2).png" alt="Hadir Abdelhamid Fayad" class="profile-img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <h2 class="section-title">WORK EXPERIENCE</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Marketing Manager</h3>
+                        <p>Athar for Marketing & Software Solutions</p>
+                        <p>Led multi-channel campaigns and content strategy for regional clients, focusing on performance metrics and ROI.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Marketer</h3>
+                        <p>Grow Up Marketing Agency</p>
+                        <p>Created and optimized ad content based on audience insights.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Head of Content Creation & Account Manager</h3>
+                        <p>Sign Up company</p>
+                        <p>Delivered client-focused content plans and analyzed engagement outcomes.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Marketing Manager & PR Manager</h3>
+                        <p>Nile Company</p>
+                        <p>Handled strategic planning, content production, and brand positioning.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Marketing & Sales Manager</h3>
+                        <p>Bronze Company</p>
+                        <p>Developed sales funnels and executed digital strategies to increase conversion rates.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Marketing Management Leader</h3>
+                        <p>MOVE Application</p>
+                        <p>Oversaw end-to-end campaign management, KPI tracking, and audience targeting.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">SKILLS</h2>
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h3>Technical Skills</h3>
+                    <div class="skill-item">
+                        <h4><i class="fas fa-table"></i> Excel (advanced formulas, pivot tables, dashboards)</h4>
+                    </div>
+                    <div class="skill-item">
+                        <h4><i class="fas fa-chart-bar"></i> Power BI, SQL</h4>
+                    </div>
+                    <div class="skill-item">
+                        <h4><i class="fas fa-image"></i> Photoshop</h4>
+                    </div>
+                    <div class="skill-item">
+                        <h4><i class="fab fa-facebook"></i> Facebook Ads Manager</h4>
+                    </div>
+                    <div class="skill-item">
+                        <h4><i class="fas fa-file-alt"></i> Microsoft Office (Word, PowerPoint)</h4>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>Marketing & Analytical Skills</h3>
+                    <div class="skill-item">
+                        <h4><i class="fas fa-chart-line"></i> Marketing strategy development</h4>
+                    </div>
+                    <div class="skill-item">
+                        <h4><i class="fas fa-pen-fancy"></i> Content writing for social media</h4>
+                    </div>
+                    <div class="skill-item">
+                        <h4><i class="fas fa-chart-pie"></i> Campaign analysis & performance reporting</h4>
+                    </div>
+                    <div class="skill-item">
+                        <h4><i class="fas fa-map-signs"></i> Business process mapping & KPI tracking</h4>
+                    </div>
+                    <div class="skill-item">
+                        <h4><i class="fas fa-database"></i> Data-driven decision making</h4>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>Soft Skills</h3>
+                    <div class="skill-item">
+                        <h4><i class="fas fa-brain"></i> Analytical thinking & problem-solving</h4>
+                    </div>
+                    <div class="skill-item">
+                        <h4><i class="fas fa-bolt"></i> Fast learner & self-motivated</h4>
+                    </div>
+                    <div class="skill-item">
+                        <h4><i class="fas fa-users"></i> Team leadership & communication</h4>
+                    </div>
+                    <div class="skill-item">
+                        <h4><i class="fas fa-palette"></i> Creativity & attention to detail</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="education">
+        <div class="container">
+            <h2 class="section-title">EDUCATION & QUALIFICATIONS</h2>
+            <div class="education-content">
+                <div class="education-item">
+                    <h3>ACADEMIC QUALIFICATIONS</h3>
+                    <p><strong>Faculty of Specific Education, Damietta University</strong></p>
+                    <p>Bachelor's Degree in Education – Computer Science</p>
+                    <p>Graduated with a "Good" grade in 2018</p>
+                </div>
+                
+                <div class="education-item">
+                    <h3>CURRENT STUDIES</h3>
+                    <p>Currently pursuing PMI-PBA (Professional in Business Analysis) certification</p>
+                    <p>Studying Data Analysis under the Digital Egypt Pioneers Initiative (DEPI)</p>
+                    <p>Gained understanding of business analysis methodologies (SWOT, GAP Analysis), requirement elicitation and stakeholder analysis, data interpretation and performance reporting</p>
+                </div>
+                
+                <div class="education-item">
+                    <h3>LANGUAGES</h3>
+                    <p><strong>Arabic:</strong> Native</p>
+                    <p><strong>English:</strong> BI</p>
+                    <p><strong>German:</strong> BI</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section class="achievements">
+        <div class="container">
+            <h2 class="section-title">KEY ACHIEVEMENTS</h2>
+            <div class="achievements-content">
+                <div class="achievement-item">
+                    <i class="fas fa-users"></i>
+                    <h3>30,000+ Users Reached</h3>
+                    <p>Managed marketing campaigns that reached over 30,000 users</p>
+                </div>
+                <div class="achievement-item">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>40% Engagement Boost</h3>
+                    <p>Developed and executed social media strategies that boosted engagement by 40%</p>
+                </div>
+                <div class="achievement-item">
+                    <i class="fas fa-file-alt"></i>
+                    <h3>Data-Based Reports</h3>
+                    <p>Created data-based reports to evaluate campaign ROI and customer behavior</p>
+                </div>
+                <div class="achievement-item">
+                    <i class="fas fa-building"></i>
+                    <h3>Co-working Space</h3>
+                    <p>Founded and managed a co-working space with full marketing and operations oversight</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">CONTACT</h2>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <h3>Email</h3>
+                    <p>Available upon request</p>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <h3>Phone</h3>
+                    <p>+20 15 512 060 10</p>
+                </div>
+                <div class="contact-item">
+                    <i class="fab fa-linkedin"></i>
+                    <h3>LinkedIn</h3>
+                    <p><a href="https://www.linkedin.com/in/hadir-abdelhamid-fayad-b416b61ba/" style="color: var(--color-primary);">hadir-abdelhamid-fayad</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/hadir-abdelhamid-fayad-b416b61ba/"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-behance"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+            </div>
+            <p>&copy; 2023 Hadir Abdelhamid Fayad - Marketing Professional | Business Analyst</p>
+        </div>
+    </footer>
+</body>
+</html>
